@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prospects Rating Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #333;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .grade-a { color: #27ae60; }
+        .grade-b { color: #3498db; }
+        .grade-c { color: #f39c12; }
+        .grade-d { color: #e74c3c; }
+        .filters {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .filter-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: end;
+        }
+        .filter-group {
+            flex: 1;
+            min-width: 150px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        .filter-group select, .filter-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .btn {
+            padding: 8px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn-reset {
+            background-color: #95a5a6;
+        }
+        .btn-reset:hover {
+            background-color: #7f8c8d;
+        }
+        .btn-export {
+            background-color: #27ae60;
+            margin-left: 10px;
+        }
+        .btn-export:hover {
+            background-color: #2ecc71;
+        }
+        .prospects-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .grade-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+        }
+        .grade-a-badge { background-color: #27ae60; }
+        .grade-b-badge { background-color: #3498db; }
+        .grade-c-badge { background-color: #f39c12; }
+        .grade-d-badge { background-color: #e74c3c; }
+        .priority-high { color: #e74c3c; font-weight: bold; }
+        .priority-medium { color: #f39c12; font-weight: bold; }
+        .priority-low { color: #3498db; }
+        .priority-very-low { color: #95a5a6; }
+        .score-bar {
+            width: 100px;
+            height: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+        }
+        .score-fill {
+            height: 100%;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        .score-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+        .factors-details {
+            font-size: 0.85em;
+            color: #666;
+        }
+        .recommendation {
+            font-size: 0.9em;
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sales Prospects Rating Dashboard</h1>
+            <div class="nav-links">
+                <a href="/">Deals Dashboard</a>
+                <a href="/prospects">Prospects</a>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Prospects</div>
+                <div class="stat-value">{{ stats.total_prospects }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Grade A</div>
+                <div class="stat-value grade-a">{{ stats.grade_a }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Grade B</div>
+                <div class="stat-value grade-b">{{ stats.grade_b }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Grade C</div>
+                <div class="stat-value grade-c">{{ stats.grade_c }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Grade D</div>
+                <div class="stat-value grade-d">{{ stats.grade_d }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Score</div>
+                <div class="stat-value">{{ stats.avg_score }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Potential</div>
+                <div class="stat-value">${{ "{:,.0f}".format(stats.total_potential_value) }}</div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <form method="GET" action="/prospects">
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="grade">Grade</label>
+                        <select name="grade" id="grade">
+                            <option value="">All Grades</option>
+                            {% for g in unique_values.grades %}
+                                <option value="{{ g }}" {% if filters.grade == g %}selected{% endif %}>{{ g }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="priority">Priority</label>
+                        <select name="priority" id="priority">
+                            <option value="">All Priorities</option>
+                            {% for p in unique_values.priorities %}
+                                <option value="{{ p }}" {% if filters.priority == p %}selected{% endif %}>{{ p }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="industry">Industry</label>
+                        <select name="industry" id="industry">
+                            <option value="">All Industries</option>
+                            {% for ind in unique_values.industries %}
+                                <option value="{{ ind }}" {% if filters.industry == ind %}selected{% endif %}>{{ ind }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="region">Region</label>
+                        <select name="region" id="region">
+                            <option value="">All Regions</option>
+                            {% for reg in unique_values.regions %}
+                                <option value="{{ reg }}" {% if filters.region == reg %}selected{% endif %}>{{ reg }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="min_score">Min Score</label>
+                        <input type="number" name="min_score" id="min_score" value="{{ filters.min_score }}" min="0" max="100" step="10">
+                    </div>
+                    
+                    <button type="submit" class="btn">Apply Filters</button>
+                    <a href="/prospects" class="btn btn-reset">Reset</a>
+                    <button type="button" class="btn btn-export" onclick="exportCSV()">Export CSV</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="prospects-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Score</th>
+                        <th>Grade</th>
+                        <th>Priority</th>
+                        <th>Industry</th>
+                        <th>Region</th>
+                        <th>Size</th>
+                        <th>Potential Value</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rating in ratings %}
+                    <tr>
+                        <td>
+                            <strong>{{ rating.company_name }}</strong><br>
+                            <small style="color: #666;">{{ rating.domain }}</small>
+                        </td>
+                        <td>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: {{ rating.score }}%;"></div>
+                                <div class="score-text">{{ rating.score }}</div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="grade-badge grade-{{ rating.grade|lower }}-badge">{{ rating.grade }}</span>
+                        </td>
+                        <td>
+                            <span class="priority-{{ rating.priority|lower|replace(' ', '-') }}">{{ rating.priority }}</span>
+                        </td>
+                        <td>{{ rating.factors.industry.value if rating.factors.industry else 'Unknown' }}</td>
+                        <td>{{ rating.factors.region.value if rating.factors.region else 'Unknown' }}</td>
+                        <td>{{ rating.factors.size.value if rating.factors.size else 'Unknown' }}</td>
+                        <td>${{ "{:,.0f}".format(rating.potential_value) }}</td>
+                        <td class="recommendation">{{ rating.recommendation }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function exportCSV() {
+            // Get current filter values
+            const params = new URLSearchParams();
+            
+            const grade = document.getElementById('grade').value;
+            const priority = document.getElementById('priority').value;
+            const industry = document.getElementById('industry').value;
+            const region = document.getElementById('region').value;
+            const minScore = document.getElementById('min_score').value;
+            
+            if (grade) params.append('grade', grade);
+            if (priority) params.append('priority', priority);
+            if (industry) params.append('industry', industry);
+            if (region) params.append('region', region);
+            if (minScore) params.append('min_score', minScore);
+            
+            // Create export URL with current filters
+            const exportUrl = '/export_prospects?' + params.toString();
+            
+            // Trigger download
+            window.location.href = exportUrl;
+        }
+    </script>
+</body>
+</html>
