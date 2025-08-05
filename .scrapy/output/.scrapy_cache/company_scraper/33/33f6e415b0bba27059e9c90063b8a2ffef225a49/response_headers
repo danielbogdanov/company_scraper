@@ -1,0 +1,23 @@
+Content-Type: text/html; charset=UTF-8
+Link: <https://static.parastorage.com/>; rel=preconnect; crossorigin;,<https://static.parastorage.com/>; rel=preconnect;,<https://static.wixstatic.com/>; rel=preconnect; crossorigin;,<https://static.wixstatic.com/>; rel=preconnect;,<https://siteassets.parastorage.com>; rel=preconnect; crossorigin;,
+Html-Cacheable: true
+Etag: W/"e2f81584de1ba5b78cbcd7d0d10031c3"
+Content-Language: en-US
+Strict-Transport-Security: max-age=86400
+Cache-Control: public,max-age=0,must-revalidate
+Server: Pepyaka
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Age: 146848
+Date: Fri, 01 Aug 2025 07:15:40 GMT
+X-Served-By: cache-lin1730069-LIN
+X-Cache: HIT
+Vary: Accept-Encoding
+Server-Timing: cache;desc=hit, varnish;desc=hit_hit, dc;desc=fastly_g
+Set-Cookie: ssr-caching=cache#desc=hit#varnish=hit_hit#dc#desc=fastly_g; max-age=20
+X-Wix-Request-Id: 1754032540.715514666192335909
+X-Seen-By: yvSunuo/8ld62ehjr5B7kA==,2d58ifebGbosy5xc+FRaltLb2IoBJ+D9KC6hcUx8p/ONr3HyPLA3LB/T7MuEiHt3ZZXg6u1g/yPEaRieVjASPA==,2UNV7KOq4oGjA5+PKsX47DsEejkYtxcUetjvzoNSEPsNBUnLVo+C/t7t9BP1GBSc
+Via: 1.1 google
+Glb-X-Seen-By: bS8wRlGzu0Hc+WrYuHB8QIg44yfcdCMJRkBoQ1h6Vjc=
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

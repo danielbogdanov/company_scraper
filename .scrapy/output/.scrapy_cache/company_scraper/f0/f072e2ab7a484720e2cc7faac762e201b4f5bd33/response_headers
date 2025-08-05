@@ -1,0 +1,15 @@
+Content-Length: 162
+Date: Fri, 01 Aug 2025 17:37:42 GMT
+Content-Type: text/html
+Location: https://ivcevidensia.nl/
+Cf-Ray: 96871add296c313c-SOF
+Cf-Cache-Status: BYPASS
+Vary: Accept-Encoding
+Ki-Cf-Cache-Status: BYPASS
+Ki-Edge: v=21.1.1;mv=5.0.10
+X-Content-Type-Options: nosniff
+X-Edge-Location-Klb: 1
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=M%2B0VboUYuv6Rxw4zt7BfSGKw7hElYBp9HmDaB9tMqGlY5U%2BXdWuncGkUNbH9mfCRbyup1AHeYLYKgRT6Z6SdNDLgPXx%2FtBWU4DAyYbGIxBdliQwCqhp7n%2FpHfJX4jw%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Alt-Svc: h3=":443"; ma=86400

@@ -1,0 +1,20 @@
+Server: myracloud
+Date: Fri, 01 Aug 2025 17:38:43 GMT
+Content-Type: text/plain
+Set-Cookie: route=1754069924.877.1750.115949|17dd2f58c70c69741408d3d4ce512675; Path=/; HttpOnly
+Set-Cookie: SERVERID=server3; path=/
+Last-Modified: Thu, 31 Jul 2025 14:19:08 GMT
+Vary: accept-encoding
+Etag: W/"688b7b5c-22d"
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Encoding: gzip
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+Access-Control-Allow-Headers: DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization
+Access-Control-Max-Age: 1728000
+Referrer-Policy: origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Cache-Control: private

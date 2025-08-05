@@ -1,0 +1,8 @@
+Date: Fri, 01 Aug 2025 17:38:04 GMT
+Server: Apache/2.4.62 (Debian)
+Vary: RSC,Next-Router-State-Tree,Next-Router-Prefetch,Next-Router-Segment-Prefetch,Accept-Encoding
+X-Nextjs-Cache: HIT
+X-Nextjs-Prerender: 1
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: text/plain
+Content-Encoding: gzip

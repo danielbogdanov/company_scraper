@@ -1,0 +1,13 @@
+Server: nginx
+Date: Fri, 01 Aug 2025 17:38:04 GMT
+Content-Type: text/plain
+Last-Modified: Mon, 28 Jul 2025 07:23:55 GMT
+Vary: Accept-Encoding
+Etag: W/"6887258b-32c63"
+X-Frame-Options: sameorigin
+Access-Control-Allow-Origin: *
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Content-Encoding: gzip

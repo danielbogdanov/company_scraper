@@ -1,0 +1,11 @@
+Content-Length: 43
+Date: Fri, 01 Aug 2025 17:37:40 GMT
+Server: Apache
+Cache-Control: max-age=0, must-revalidate, private
+X-Powered-By: pimcore
+Content-Language: pl
+X-Pimcore-Output-Cache-Disable-Reason: authorization header in use
+Expires: Fri, 01 Aug 2025 17:37:40 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/plain; charset=UTF-8

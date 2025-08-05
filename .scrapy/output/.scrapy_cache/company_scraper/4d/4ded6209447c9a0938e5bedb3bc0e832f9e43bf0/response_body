@@ -1,0 +1,21 @@
+# General
+User-agent: *
+Sitemap: https://ivcevidensia.nl/sitemap.xml
+
+
+Allow: /
+Disallow: /api
+Disallow: /assets
+Disallow: /error
+Disallow: /app_data
+
+# Allow Googlebots
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /assets
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /

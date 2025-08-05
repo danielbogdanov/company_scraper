@@ -1,0 +1,24 @@
+Server: myracloud
+Date: Fri, 01 Aug 2025 17:38:23 GMT
+Content-Type: text/plain; charset=utf-8
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Xss-Protection: 0
+Vary: user-agent, accept-encoding
+User-Agent: desktop
+Access-Control-Allow-Headers: Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Origin,Access-Control-Max-Age,Content-Type,Content-Length,Date,Cache-Control,Expires,Etag,Strict-Transport-Security,Content-Security-Policy,Cross-Origin-Opener-Policy,Cross-Origin-Embedder-Policy,X-Content-Type-Options,X-Permitted-Cross-Domain-Policies,Permissions-Policy,Referrer-Policy,Vary,Accept-Ranges,X-Frame-Options,Access-Control-Allow-Credentials
+Permissions-Policy: geolocation=(self), midi=(self), notifications=(self), push=(self), sync-xhr=(), microphone=(self), camera=(self), magnetometer=(self), gyroscope=(self), speaker=(self), vibrate=(self), fullscreen=(self), payment=(self)
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 600
+Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS,PATCH
+Cross-Origin-Embedder-Policy: unsafe-none
+Cross-Origin-Opener-Policy: same-origin
+Expires: Jul 31, 2025, 5:03:37 PM UTC
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=14400, must-revalidate
+Content-Encoding: gzip
+X-Cdn: 1

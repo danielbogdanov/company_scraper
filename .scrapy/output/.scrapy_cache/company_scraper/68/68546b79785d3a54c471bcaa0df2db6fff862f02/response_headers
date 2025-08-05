@@ -1,0 +1,17 @@
+Content-Length: 162
+Date: Fri, 01 Aug 2025 17:37:38 GMT
+Content-Type: text/html
+Location: https://ivcevidensia.nl/robots.txt
+Cf-Ray: 96871ac4f858313c-SOF
+Cf-Cache-Status: DYNAMIC
+Ki-Cache-Type: None
+Ki-Cf-Cache-Status: BYPASS
+Ki-Edge: v=21.1.1;mv=5.0.10
+X-Content-Type-Options: nosniff
+X-Edge-Location-Klb: 1
+Set-Cookie: __cf_bm=cRKlJ18JRJ1Dnf7GBJ_IpojRu85DSEGKHbi5YY6HA3M-1754069858-1.0.1.1-tk2mghrIXsRoQ6H7ulsYUOwVSVAycP4dh._3NhdZnuSeFlhirofKkpWMr.djmknsAkQVEk_RdgnRwCiyAY8XpCOV0D_9gvotHEFlr22T2ew; path=/; expires=Fri, 01-Aug-25 18:07:38 GMT; domain=.evidensia.nl; HttpOnly; Secure; SameSite=None
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XL51fC5ACjZtILcVTjgZ2p79SmuqWm497guLOoseE7ikXvWbka1fnjhqdFqm1qOwAuow62YXQ2QvrE4usMWj0ayXbgm26f9pbkI5ezN8H1sD6blIvmnleSkY2BtG2Q%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Alt-Svc: h3=":443"; ma=86400

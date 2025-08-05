@@ -1,0 +1,13 @@
+Date: Fri, 01 Aug 2025 17:39:11 GMT
+Content-Type: text/plain; charset=utf-8
+Server: cloudflare
+Link: <https://superbockgroup.com/wp-json/>; rel="https://api.w.org/"
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=a2tH1mDxxwTl3KbjbadHVg8dqBMvYxBwmpjvgpBDGqrcViTOke9BiJl5qFuvz0GHzqzHVRj2f%2B6VBx2RI4Sus5rcw9olPpJqhFVPuFC1eP8%3D"}]}
+Cache-Control: max-age=14400
+Cf-Cache-Status: EXPIRED
+Last-Modified: Fri, 01 Aug 2025 17:39:11 GMT
+Vary: accept-encoding
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Content-Encoding: gzip
+Cf-Ray: 96871d0348216ea0-SOF
+Alt-Svc: h3=":443"; ma=86400

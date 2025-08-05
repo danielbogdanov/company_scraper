@@ -1,0 +1,21 @@
+Date: Fri, 01 Aug 2025 17:38:57 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Encoding: gzip
+Cf-Ray: 96871cb69b26d0fd-SOF
+Cf-Cache-Status: HIT
+Age: 2082
+Cache-Control: no-store
+Last-Modified: Fri, 01 Aug 2025 17:04:15 GMT
+Link: <https://www.scrigno.com/en/wp-json/>; rel="https://api.w.org/", <https://www.scrigno.com/en/wp-json/wp/v2/pages/8698>; rel="alternate"; title="JSON"; type="application/json", <https://www.scrigno.com/en/?p=8698>; rel=shortlink
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+Access-Control-Allow-Methods: PUT,POST,GET,OPTIONS
+Cf-Apo-Via: origin,host
+Cf-Edge-Cache: cache,platform=wordpress
+Permissions-Policy: accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(self), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=()
+Referrer-Policy: no-referrer
+X-Xss-Protection: 1; mode=block
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=wpeTThqUARDagCng2QhVrhd7Jlr78UrU%2FYPllDksaluucLfXAzykbqTCVxlnhmc3tyOxBYIwacexqOs4WPoiVzdFku5yiOzd6iTZJTvr8KU%2Fh1z%2BPbYGLea3czl34kc21A%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Server-Timing: cfL4;desc="?proto=TCP&rtt=32803&min_rtt=32133&rtt_var=2789&sent=25&recv=18&lost=0&retrans=0&sent_bytes=22723&recv_bytes=2602&delivery_rate=735710&cwnd=257&unsent_bytes=0&cid=453975b5e65f7373&ts=9656&x=0"

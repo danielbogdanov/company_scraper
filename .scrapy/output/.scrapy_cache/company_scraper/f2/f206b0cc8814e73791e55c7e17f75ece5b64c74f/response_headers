@@ -1,0 +1,20 @@
+Server: myracloud
+Date: Fri, 01 Aug 2025 17:38:45 GMT
+Content-Type: text/html; charset=utf-8
+Vary: accept-encoding
+Content-Language: pl-PL
+Expires: Sat, 02 Aug 2025 02:52:15 GMT
+Etag: W/"ea269ecd78f6d091a912272f5330fbf9"
+Cache-Control: max-age=33210
+Pragma: public
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Encoding: gzip
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+Access-Control-Allow-Headers: DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization
+Access-Control-Max-Age: 1728000
+Referrer-Policy: origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains

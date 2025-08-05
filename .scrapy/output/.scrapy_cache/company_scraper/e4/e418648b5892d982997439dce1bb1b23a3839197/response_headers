@@ -1,0 +1,20 @@
+Date: Fri, 01 Aug 2025 17:39:29 GMT
+Content-Type: text/html; charset=UTF-8
+Server: cloudflare
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Cf-Edge-Cache: cache,platform=wordpress
+Link: <https://sensus.aero/wp-json/>; rel="https://api.w.org/", <https://sensus.aero/wp-json/wp/v2/pages/2701>; rel="alternate"; title="JSON"; type="application/json", <https://sensus.aero/?p=2701>; rel=shortlink
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer-when-downgrade
+Vary: Accept-Encoding
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=sUJMCiF5VpSb%2BP1QAgh7HruqUTKOR4ZbhlFa2lbTqbRoIlBDBm%2BbLfWQPKXSIIMZ5%2Bwxa9Gs2JLBO%2FTeQhDUkkGoH73HYLiUkw%3D%3D"}]}
+Cf-Cache-Status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Content-Encoding: gzip
+Cf-Ray: 96871d7b5cbed0f4-SOF
+Alt-Svc: h3=":443"; ma=86400

@@ -1,0 +1,18 @@
+Content-Type: text/plain; charset=utf-8
+Etag: W/"20e-QRfSrvEaN8g4TwqxbyliooehO38"
+Cache-Control: public,max-age=0,must-revalidate
+Server: Pepyaka
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Age: 237802
+Date: Fri, 01 Aug 2025 07:15:34 GMT
+X-Served-By: cache-lin1730037-LIN
+X-Cache: HIT
+Vary: Accept-Encoding
+Server-Timing: cache;desc=hit, varnish;desc=hit_hit, dc;desc=fastly_g
+X-Wix-Request-Id: 1754032534.911811100696679611
+X-Seen-By: yvSunuo/8ld62ehjr5B7kA==,7U7NzZSqfMgd9YnjHLtUa7xkNjrXdwdgtu6E0yACibU=,GilIRCy+Ky2nI9KZaDKzWLxkNjrXdwdgtu6E0yACibU=,m0j2EEknGIVUW/liY8BLLuUQRIjVeXNEkXEE8ae+MQlbeSRVAoMFHdNCF4X0YvQG,2d58ifebGbosy5xc+FRaliY0b2HkYaSShEZJT0qCKnwJHob2Ma5lOV+7ilulPSUlZuVTbWVBAAfY+mYAEKqJbw==,2UNV7KOq4oGjA5+PKsX47IZDoIWn0KvgFcU0prNOlQwyIvXDwAgQnMaS/gEZIOGh
+Via: 1.1 google
+Glb-X-Seen-By: bS8wRlGzu0Hc+WrYuHB8QIg44yfcdCMJRkBoQ1h6Vjc=
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

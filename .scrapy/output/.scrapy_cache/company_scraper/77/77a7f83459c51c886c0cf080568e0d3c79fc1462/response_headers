@@ -1,0 +1,7 @@
+Date: Fri, 01 Aug 2025 17:38:46 GMT
+Location: https://www.scrigno.com/en/
+Vary: accept-encoding
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rSjxh7gJNj3I7slKw0BEDVpnAWax8Ls%2Bnv%2BLS%2Blf3OGlWKloCni9SKlBnPtgNp%2BL9ZACc7YO5lSUPZEnmnVm85Zj%2F51soui2Jg%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+Cf-Ray: 96871c6de8638ef6-SOF

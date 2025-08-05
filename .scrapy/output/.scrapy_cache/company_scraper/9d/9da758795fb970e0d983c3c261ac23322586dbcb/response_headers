@@ -1,0 +1,11 @@
+Content-Length: 162
+Server: nginx
+Date: Fri, 01 Aug 2025 17:37:44 GMT
+Content-Type: text/html
+Location: https://www.lacompagniedulit.com/robots.txt
+X-Frame-Options: sameorigin
+Access-Control-Allow-Origin: *
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin

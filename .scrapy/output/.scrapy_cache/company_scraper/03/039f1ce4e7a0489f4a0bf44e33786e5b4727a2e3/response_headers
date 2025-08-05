@@ -1,0 +1,17 @@
+Date: Fri, 01 Aug 2025 17:39:08 GMT
+Content-Type: text/html; charset=iso-8859-1
+Server: cloudflare
+Location: https://www.locatory.com/robots.txt
+Cf-Ray: 96871cf6abd36e48-SOF
+Cf-Cache-Status: MISS
+Cache-Control: max-age=14400
+Expires: Fri, 01 Aug 2025 18:39:08 GMT
+Vary: Accept-Encoding
+Cf-Apo-Via: origin,resnok
+Server-Timing: cfCacheStatus;desc="MISS"
+Server-Timing: cfOrigin;dur=0,cfEdge;dur=164
+Server-Timing: cfL4;desc="?proto=TCP&rtt=32725&min_rtt=31925&rtt_var=9476&sent=5&recv=7&lost=0&retrans=0&sent_bytes=3916&recv_bytes=1946&delivery_rate=131437&cwnd=170&unsent_bytes=0&cid=f42d62a309f1640c&ts=205&x=0"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=5IBvoQLV8z92Vwgxjba%2Bbg5Bgr9qswWyldDeZcVv2iO%2BdlARwSdaTQ7qEVqUq%2BAKuC77UGk7kspW262ZtckiNs5%2FNEeRMipaJft2STeCiJvIMxMPQHcjRHNLpLVM1A%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Speculation-Rules: "/cdn-cgi/speculation"
+Alt-Svc: h3=":443"; ma=86400
