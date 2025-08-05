@@ -80,22 +80,41 @@ def dashboard():
 
 @app.route('/prospects')
 def prospects():
-    # Get the latest ratings file
+    # Get the latest scraped data and ratings files
+    scraped_files = [f for f in os.listdir('output') if f.startswith('final_company_data_') and f.endswith('.csv')]
     rating_files = [f for f in os.listdir('output') if f.startswith('company_ratings_') and f.endswith('.json')]
-    if not rating_files:
-        # Generate new ratings if none exist
-        rater = CompanyRater()
-        scraped_files = [f for f in os.listdir('output') if f.startswith('final_company_data_') and f.endswith('.csv')]
-        if scraped_files:
-            latest_scraped = sorted(scraped_files)[-1]
-            ratings = rater.rate_companies_batch(f'output/{latest_scraped}')
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            rater.save_ratings(ratings, f'output/company_ratings_{timestamp}')
-            rating_files = [f'company_ratings_{timestamp}.json']
-        else:
-            return "No scraped company data found. Please run the scraper first.", 404
     
-    latest_rating_file = sorted(rating_files)[-1]
+    if not scraped_files:
+        return "No scraped company data found. Please run the scraper first.", 404
+    
+    latest_scraped = sorted(scraped_files)[-1]
+    
+    # Check if we need to generate new ratings
+    need_new_ratings = False
+    
+    if not rating_files:
+        need_new_ratings = True
+        print("No ratings file found, generating new ratings...")
+    else:
+        latest_rating_file = sorted(rating_files)[-1]
+        
+        # Extract timestamps from filenames to compare
+        scraped_timestamp = latest_scraped.split('_')[2] + '_' + latest_scraped.split('_')[3].replace('.csv', '')
+        rating_timestamp = latest_rating_file.split('_')[2] + '_' + latest_rating_file.split('_')[3].replace('.json', '')
+        
+        if scraped_timestamp > rating_timestamp:
+            need_new_ratings = True
+            print(f"Scraped data ({scraped_timestamp}) is newer than ratings ({rating_timestamp}), generating new ratings...")
+    
+    if need_new_ratings:
+        # Generate new ratings
+        rater = CompanyRater()
+        ratings = rater.rate_companies_batch(f'output/{latest_scraped}')
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        rater.save_ratings(ratings, f'output/company_ratings_{timestamp}')
+        latest_rating_file = f'company_ratings_{timestamp}.json'
+    else:
+        latest_rating_file = sorted(rating_files)[-1]
     
     # Load ratings
     with open(f'output/{latest_rating_file}', 'r') as f:
@@ -261,4 +280,4 @@ def export_prospects():
     return response
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5002)

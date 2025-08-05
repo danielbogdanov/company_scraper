@@ -7,6 +7,20 @@ class CompanyRater:
     def __init__(self):
         # Load historical deal patterns
         self.deals_df = pd.read_csv('data/deals/deals.csv', delimiter=';')
+        
+        # Clean and convert Amount column to numeric (handle spaces in numbers)
+        self.deals_df['Amount'] = pd.to_numeric(
+            self.deals_df['Amount'].astype(str).str.replace(' ', ''), 
+            errors='coerce'
+        )
+        
+        # Drop rows with invalid amounts
+        initial_count = len(self.deals_df)
+        self.deals_df = self.deals_df.dropna(subset=['Amount'])
+        dropped_count = initial_count - len(self.deals_df)
+        if dropped_count > 0:
+            print(f"Dropped {dropped_count} rows with invalid Amount values")
+        
         self.patterns = self._analyze_patterns()
         
     def _analyze_patterns(self):
